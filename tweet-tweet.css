@@ -1,0 +1,13 @@
+body {
+  background-color: aqua;
+}
+.heading-tweet {
+  text-align: center;
+  font-weight: 900;
+  margin: 20px;
+}
+.border {
+  margin: 25px;
+  height: 5px;
+  background-color: black;
+}
