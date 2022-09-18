@@ -14,8 +14,8 @@
   <body class="container">
     <h1 class="heading-tweet">Tweet Tweet</h1>
     <div class="border"></div>
-    <div class="row">
-      <div class="left-section col-md-12 col-lg-6">
+    <div class="main-section">
+      <div class="left-section">
         <input
           type="text"
           name="text"
@@ -24,20 +24,21 @@
           class="first-input"
         />
         <br />
-        <button>Submit</button>
+        <button class="submit-btn">Submit</button>
       </div>
 
       <!--  -->
-
-      <div class="right-section col-md-12 col-lg-6">
-        <div>
-          <input type="text" class="second-input" placeholder="Search Tweet" />
-        </div>
-        <div>
-          <ol>
-            <li>Tweet 1 text</li>
-          </ol>
-          <button>Delete</button>
+      <div>
+        <input type="text" class="second-input" placeholder="Search Tweet" />
+        <div class="right-section">
+          <div class="children-div">
+            <ol class="ol">
+              <li class="li">Tweet 1 text</li>
+              <button class="delete-btn">Delete</button>
+              <li class="li">Tweet 1 text</li>
+              <button class="delete-btn">Delete</button>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
