@@ -11,3 +11,64 @@ body {
   height: 5px;
   background-color: black;
 }
+
+.left-section {
+  background-color: blue;
+  /* /* width: 500px; */
+  height: 300px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.first-input {
+  margin-top: 150px;
+  margin-bottom: 20px;
+  width: 400px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: aqua;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(88, 69, 139);
+}
+
+button {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  color: aqua;
+  background-color: black;
+  height: 40px;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px 3px rgb(90, 197, 205);
+}
+
+.second-input {
+  width: 400px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: aqua;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(88, 69, 139);
+}
+
+/* ------------------------- */
+
+.right-section {
+  background-color: darkblue;
+  height: 300px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.second-input {
+  margin: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: aqua;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(88, 69, 139);
+}
