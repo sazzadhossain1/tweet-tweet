@@ -9,7 +9,7 @@ const liTextId = document.querySelector("#comment-li");
 const strongText = document.querySelector(".strong");
 const spnComment = document.querySelector(".spn");
 
-const productData = [];
+let productData = [];
 
 function getData(commentList) {
   if (productData.length > 0) {
@@ -58,7 +58,16 @@ submitButton.addEventListener("click", function (e) {
 
 olText.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
+    // remove from ui //
     const target = e.target.parentElement;
     e.target.parentElement.parentElement.removeChild(target);
+
+    const id = parseInt(target.id.split("-")[1]);
+    console.log(typeof id);
+    // remove from store //
+    const result = productData.filter((product) => {
+      return product.id !== id;
+    });
+    productData = result;
   }
 });
