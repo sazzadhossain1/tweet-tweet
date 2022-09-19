@@ -53,3 +53,11 @@ submitButton.addEventListener("click", function (e) {
   getData(productData);
   inputOne.value = "";
 });
+
+// delete item //
+
+olText.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-btn")) {
+    console.log(e.target);
+  }
+});
