@@ -7,32 +7,41 @@ const olText = document.querySelector(".ol");
 const liText = document.querySelector(".li-list");
 const liTextId = document.querySelector("#comment-li");
 const strongText = document.querySelector(".strong");
+const spnComment = document.querySelector(".spn");
 
-const productData = [
-  {
-    id: 1,
-    comment: "tweet tweet comment",
-  },
-  {
-    id: 2,
-    comment: "tweet is the best platfrom",
-  },
-  {
-    id: 3,
-    comment: "tweet is also social business platfrom",
-  },
-];
+const productData = [];
 
 function getData(commentList) {
-  let li = "";
-  commentList.forEach((commentObj) => {
-    li = document.createElement("li");
-    li.className = "li-list";
-    li.id = `comment-li${commentObj.id}`;
-    li.innerHTML = `<strong class="strong">${commentObj.comment}</strong>
-     <button class="delete-btn">Delete</button>`;
-    olText.appendChild(li);
-  });
+  if (productData.length > 0) {
+    let li = "";
+    commentList.forEach((commentObj) => {
+      li = document.createElement("li");
+      li.className = "li-list";
+      li.id = `comment-li${commentObj.id}`;
+      li.innerHTML = `<strong class="strong">${commentObj.comment}</strong>
+           <button class="delete-btn">Delete</button>`;
+      olText.appendChild(li);
+    });
+  } else {
+    console.log("Please wright some comment");
+  }
 }
 
 getData(productData);
+
+submitButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  let comment = inputOne.value;
+
+  if (comment === "" || comment === " ") {
+    alert("Please fill up the input filed");
+  } else {
+    productData.push({
+      id: 0,
+      comment,
+    });
+  }
+  olText.innerHTML = "";
+  getData(productData);
+  inputOne.value = "";
+});
