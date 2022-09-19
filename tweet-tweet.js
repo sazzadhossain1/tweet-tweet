@@ -24,16 +24,15 @@ const productData = [
 ];
 
 function getData(commentList) {
-  console.log(commentList);
   let li = "";
   commentList.forEach((commentObj) => {
     li = document.createElement("li");
     li.className = "li-list";
-    li.id = "comment-li";
+    li.id = `comment-li${commentObj.id}`;
     li.innerHTML = `<strong class="strong">${commentObj.comment}</strong>
      <button class="delete-btn">Delete</button>`;
+    olText.appendChild(li);
   });
-  olText.appendChild(li);
 }
 
 getData(productData);
