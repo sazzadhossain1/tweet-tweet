@@ -21,7 +21,7 @@ body {
   background-color: blue;
   width: 600px;
   height: 300px;
-  border: 3px solid black;
+  border: 5px solid black;
   text-align: center;
   margin: 60px;
 }
@@ -67,7 +67,7 @@ body {
   width: 600px;
   background-color: darkblue;
   height: 300px;
-  border: 3px solid black;
+  border: 5px solid black;
   text-align: center;
   margin: 5px;
 }
@@ -86,15 +86,10 @@ body {
   color: white;
 }
 
-.children-div {
+/* .children-div {
   display: flex;
-}
+} */
 
-.li {
-  margin: 10px;
-  margin-right: 20px;
+.strong {
   font-size: 20px;
-}
-.div {
-  display: flex;
 }
