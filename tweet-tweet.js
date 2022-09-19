@@ -13,6 +13,7 @@ const productData = [];
 
 function getData(commentList) {
   if (productData.length > 0) {
+    spnComment.innerHTML = "";
     let li = "";
     commentList.forEach((commentObj) => {
       li = document.createElement("li");
@@ -23,7 +24,7 @@ function getData(commentList) {
       olText.appendChild(li);
     });
   } else {
-    console.log("Please wright some comment");
+    spnComment.innerHTML = "Please wright some comment";
   }
 }
 
@@ -32,12 +33,19 @@ getData(productData);
 submitButton.addEventListener("click", function (e) {
   e.preventDefault();
   let comment = inputOne.value;
+  let id;
+
+  if (productData.length === 0) {
+    id = 0;
+  } else {
+    id = productData[productData.length - 1].id + 1;
+  }
 
   if (comment === "" || comment === " ") {
     alert("Please fill up the input filed");
   } else {
     productData.push({
-      id: 0,
+      id,
       comment,
     });
   }
