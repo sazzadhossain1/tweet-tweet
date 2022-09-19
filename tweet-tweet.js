@@ -58,6 +58,7 @@ submitButton.addEventListener("click", function (e) {
 
 olText.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
-    console.log(e.target);
+    const target = e.target.parentElement;
+    e.target.parentElement.parentElement.removeChild(target);
   }
 });
