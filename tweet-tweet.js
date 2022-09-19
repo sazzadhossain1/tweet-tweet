@@ -71,3 +71,16 @@ olText.addEventListener("click", function (e) {
     productData = result;
   }
 });
+
+inputTwo.addEventListener("keyup", (e) => {
+  const text = e.target.value.toLowerCase();
+  //   console.log(text);
+  document.querySelectorAll("  .li-list").forEach((item) => {
+    const commentName = item.firstElementChild.textContent.toLowerCase();
+    if (commentName.indexOf(text) === -1) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+    }
+  });
+});
