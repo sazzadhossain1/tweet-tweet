@@ -1,0 +1,22 @@
+// selector //
+const inputOne = document.querySelector(".first-input");
+const inputTwo = document.querySelector(".second-input");
+const submitButton = document.querySelector(".submit-btn");
+const deleteButton = document.querySelector(".delete-btn");
+const olText = document.querySelector(".ol");
+const liText = document.querySelector(".li");
+
+const productData = [
+  {
+    id: 1,
+    comment: "tweet tweet comment",
+  },
+  {
+    id: 2,
+    comment: "tweet is the best platfrom",
+  },
+  {
+    id: 3,
+    comment: "tweet is also social business platfrom",
+  },
+];
